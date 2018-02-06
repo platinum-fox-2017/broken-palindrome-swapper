@@ -6,9 +6,14 @@
  * @returns {boolean} true bila kata yang di-swap adalah palindrom
  */
 function palindromeSwapper(str) {
-  let newStr = '';
+  if (isPalindrome(str)) {
+    return true;
+  } else {
+    return false;
+  }
+  
   for (var i = 0; i < str.length; i++) {
-    newStr = '';
+    let newStr = '';
     debugger
     for (var j = 0; j < str.length-1; j++) { // should be j not i
       if (i === j) {
@@ -23,14 +28,14 @@ function palindromeSwapper(str) {
       debugger // erc
     }
     debugger
-
+    if (isPalindrome(newStr)) {
+      return true;
+    } else {
+      return false;
+    }
   }
   
-  if (isPalindrome(newStr)) {
-    return true;
-  } else {
-    return false;
-  }
+
 
 }
 
@@ -51,9 +56,9 @@ function isPalindrome(str) {
 
 
 // TEST CASE
-console.log(palindromeSwapper('arcecar')); // TRUE
+// console.log(palindromeSwapper('arcecar')); // TRUE
 console.log(palindromeSwapper('racecar')); // TRUE
-console.log(palindromeSwapper('recacar')); // FALSE
+// console.log(palindromeSwapper('recacar')); // FALSE
 
 
 /*
