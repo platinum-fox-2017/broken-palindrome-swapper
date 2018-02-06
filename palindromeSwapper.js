@@ -6,10 +6,9 @@
  * @returns {boolean} true bila kata yang di-swap adalah palindrom
  */
 function palindromeSwapper(str) {
+  if (str.split("").reverse().join("") === str) return true;
   for (var i = 0; i < str.length; i++) {
     var newStr = "";
-    debugger
-    if (str.split("").reverse().join("") === str) return true;
     for (var j = 0; j < str.length; j++) {
       if (i === j) {
         newStr += str[j+1];
@@ -21,10 +20,8 @@ function palindromeSwapper(str) {
       }
     }
     if (isPalindrome(newStr)) return true;
-    debugger
   }
   return false;
-  debugger
 }
 
 /**
