@@ -6,7 +6,7 @@
  * @returns {boolean} true bila kata yang di-swap adalah palindrom
  */
 function palindromeSwapper(str) {
-  
+  if (isPalindrome(str)) return true;
   for (var i = 0; i < str.length-1; i++) {
     var newStr = '';
     for (var j = 0; j < str.length; j++) {
